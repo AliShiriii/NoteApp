@@ -2,6 +2,7 @@ package com.example.noteapp.NewNote
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -26,6 +27,9 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setHasOptionsMenu(true)
+
     }
 
     override fun onCreateView(
@@ -59,9 +63,9 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
 
                 viewModel.insertNote(note)
 
-                Snackbar.make(
-                    requireView(), "Note saved successfully",
-                    Snackbar.LENGTH_LONG
+                Toast.makeText(
+                    requireContext(), "Note saved successfully",
+                    Toast.LENGTH_LONG
                 ).show()
 
             }
@@ -71,6 +75,7 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
         } else {
 
             activity?.show("Please enter note title!!!!!!!")
+
         }
     }
 

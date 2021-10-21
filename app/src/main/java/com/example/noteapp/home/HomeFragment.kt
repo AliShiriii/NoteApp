@@ -36,7 +36,6 @@ class HomeFragment : Fragment(R.layout.fragment_home),
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         return binding.root
@@ -109,12 +108,12 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        menu.clear()
         inflater.inflate(R.menu.home_menu, menu)
 
-        val mSearchView = menu.findItem(R.id.search_menu).actionView as SearchView
-        mSearchView.isSubmitButtonEnabled = true
-        mSearchView.setOnQueryTextListener(this)
+        val searchItem = menu.findItem(R.id.search_menu)
+        val searchView = searchItem.actionView as SearchView
+        searchView.isSubmitButtonEnabled = true
+        searchView.setOnQueryTextListener(this)
 
     }
 
@@ -142,7 +141,9 @@ class HomeFragment : Fragment(R.layout.fragment_home),
             searchNotes(newText)
 
         }
+
         return true
+
     }
 
     private fun searchNotes(query: String?) {
@@ -153,5 +154,6 @@ class HomeFragment : Fragment(R.layout.fragment_home),
             noteAdapter.differ.submitList(listQuery)
 
         })
+
     }
 }

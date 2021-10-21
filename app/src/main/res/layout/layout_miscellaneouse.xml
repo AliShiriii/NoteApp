@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutBottomSheet"
+    app:layout_behavior="BottomSheetBehavior"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backroundmiscellaneous"
+    >
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:behavior_peekHeight="40dp">-->
+<!--    <TextView-->
+<!--        android:id="@+id/textMiscellaneous"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:gravity="center"-->
+<!--        android:includeFontPadding="false"-->
+<!--        android:text="@string/miscellaneous"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <View-->
+<!--                android:id="@+id/viewColor1"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:background="@drawable/background_note_color_one1"-->
+
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageColor1"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:padding="10dp"-->
+<!--                app:srcCompat="@drawable/ic_done"-->
+<!--                app:tint="@color/white" />-->
+
+
+<!--        </FrameLayout>-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <View-->
+<!--                android:id="@+id/viewColor2"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:background="@drawable/background_note_color_two2"-->
+
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageColor2"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:padding="10dp"-->
+<!--                app:srcCompat="@drawable/ic_done"-->
+<!--                app:tint="@color/white" />-->
+
+<!--        </FrameLayout>-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <View-->
+<!--                android:id="@+id/viewColor3"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:background="@drawable/background_note_color_three3"-->
+
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageColor3"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:padding="10dp"-->
+<!--                app:srcCompat="@drawable/ic_done"-->
+<!--                app:tint="@color/white" />-->
+
+
+<!--        </FrameLayout>-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <View-->
+<!--                android:id="@+id/viewColor4"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:background="@drawable/background_note_color_for4_"-->
+
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageColor4"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:padding="10dp"-->
+<!--                app:srcCompat="@drawable/ic_done"-->
+<!--                app:tint="@color/white" />-->
+
+
+<!--        </FrameLayout>-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+
+<!--            <View-->
+<!--                android:id="@+id/viewColor5"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:background="@drawable/background_note_color_five5_"-->
+
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageColor5"-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:padding="10dp"-->
+<!--                app:srcCompat="@drawable/ic_done"-->
+<!--                app:tint="@color/white" />-->
+
+
+<!--        </FrameLayout>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/pick_color"-->
+<!--            android:textSize="22sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:includeFontPadding="false"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/pickImage"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_margin="15dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        >-->
+
+
+<!--        <ImageView-->
+<!--            android:layout_width="32dp"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            app:srcCompat="@drawable/ic_image"-->
+<!--            app:tint="@color/white" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:includeFontPadding="false"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:text="@string/add_image"/>-->
+
+<!--    </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+

@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-
     }
 }
 //chat app
