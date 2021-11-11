@@ -34,12 +34,12 @@
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:hint="@string/title"
+                    android:inputType="text"
+                    android:minHeight="48dp"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:inputType="text"
-                    />
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/addNoteBody"
@@ -51,7 +51,7 @@
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="18sp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="12dp"
                     android:inputType="textMultiLine"
                     />
 

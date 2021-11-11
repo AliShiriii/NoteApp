@@ -45,15 +45,6 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.NoteViewHolder>() {
 
     }
 
-//    private var list = emptyList<Note>()
-//
-//    @SuppressLint("NotifyDataSetChanged")
-//    fun setList(list: List<Note>) {
-//
-//        this.list = list
-//        notifyDataSetChanged()
-//
-//    }
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
 
         val currentNote = differ.currentList[position]

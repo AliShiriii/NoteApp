@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/drawable/background_note_color_one1.xml" value="0.2703125" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/drawable/ic_done.xml" value="0.1" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/drawable/ic_search.xml" value="0.2703125" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/layout/fragment_new_note.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/layout/fragment_update_note.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/layout/item_note_adapter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/layout/layout_miscellaneouse.xml" value="0.10643115942028986" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/menu/home_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/menu/new_note_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Ali/Desktop/NoteApp/app/src/main/res/menu/update_menu.xml" value="0.25416666666666665" />

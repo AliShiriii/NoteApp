@@ -50,7 +50,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
     }
 
-    fun goToNewFragment() {
+    private fun goToNewFragment() {
 
         binding.fabAddNote.setOnClickListener {
 

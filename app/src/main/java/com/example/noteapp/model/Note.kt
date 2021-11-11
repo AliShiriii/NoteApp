@@ -13,5 +13,4 @@ data class Note(
     val id: Int,
     val notTitle: String,
     val noteBode: String
-
 ) : Parcelable

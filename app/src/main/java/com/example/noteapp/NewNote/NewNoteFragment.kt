@@ -1,8 +1,17 @@
 package com.example.noteapp.NewNote
 
+import android.Manifest
+import android.app.Activity
+import android.content.ContentResolver
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.*
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -12,9 +21,9 @@ import com.example.noteapp.Utils.show
 import com.example.noteapp.databinding.FragmentNewNoteBinding
 import com.example.noteapp.home.HomeViewModel
 import com.example.noteapp.model.Note
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import java.io.InputStream
 
 
 @AndroidEntryPoint
@@ -24,6 +33,11 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
     private val binding get() = _binding!!
 
     private val viewModel: HomeViewModel by viewModels()
+
+    companion object {
+        private val REUEST_CODE_STORAGE_PERMISION = 1
+        private val REUEST_CODE_SELECTED_IMAGE = 2
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,9 +115,4 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
 
     }
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        _binding = null
-//
-//    }
 }
