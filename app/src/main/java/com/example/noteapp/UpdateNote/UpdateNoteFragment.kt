@@ -80,56 +80,50 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
 
     }
 
-    private fun deleteNote() {
-
-        AlertDialog.Builder(requireContext()).apply {
-            setTitle("Delete Note")
-            setMessage("Are you sure want to delete this name?")
-            setPositiveButton("DELETE") { _, _ ->
-
-                lifecycleScope.launch {
-                    viewModel.deleteNote(current)
-                }
-
-                findNavController().navigate(UpdateNoteFragmentDirections.actionUpdateNoteFragmentToHomeFragment())
-
-            }
-
-            setNegativeButton("CANCEL", null)
-
-        }.create().show()
-
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when (item.itemId) {
-
-            R.id.delete_menu -> {
-
-                deleteNote()
-
-            }
-
-        }
-
-        return super.onOptionsItemSelected(item)
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-
-        menu.clear()
-        inflater.inflate(R.menu.update_menu, menu)
-
-        super.onCreateOptionsMenu(menu, inflater)
-
-    }
-
-//    override fun onDestroy() {
-//        super.onDestroy()
+//    private fun deleteNote() {
 //
-//        _binding = null
+//        AlertDialog.Builder(requireContext()).apply {
+//            setTitle("Delete Note")
+//            setMessage("Are you sure want to delete this name?")
+//            setPositiveButton("DELETE") { _, _ ->
+//
+//                lifecycleScope.launch {
+//                    viewModel.deleteNote(current)
+//                }
+//
+//                findNavController().navigate(UpdateNoteFragmentDirections.actionUpdateNoteFragmentToHomeFragment())
+//
+//            }
+//
+//            setNegativeButton("CANCEL", null)
+//
+//        }.create().show()
 //
 //    }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//
+//        when (item.itemId) {
+//
+//            R.id.delete_menu -> {
+//
+//                deleteNote()
+//
+//            }
+//
+//        }
+//
+//        return super.onOptionsItemSelected(item)
+//
+//    }
+//
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//
+//        menu.clear()
+//        inflater.inflate(R.menu.update_menu, menu)
+//
+//        super.onCreateOptionsMenu(menu, inflater)
+//
+//    }
+
 }

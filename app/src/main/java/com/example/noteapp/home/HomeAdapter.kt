@@ -1,6 +1,5 @@
 package com.example.noteapp.home
 
-import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,12 +10,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.noteapp.databinding.ItemNoteAdapterBinding
 import com.example.noteapp.model.Note
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.NoteViewHolder>() {
+class HomeAdapter(private val listener: onClickDeleteListener) :
+    RecyclerView.Adapter<HomeAdapter.NoteViewHolder>() {
+
+    interface onClickDeleteListener {
+
+        fun deleteNoteItem(note: Note)
+
+    }
 
     private var binding: ItemNoteAdapterBinding? = null
 
-    class NoteViewHolder constructor(itemBinding: ItemNoteAdapterBinding) :
-        RecyclerView.ViewHolder(itemBinding.root)
+    inner class NoteViewHolder constructor(itemBinding: ItemNoteAdapterBinding) :
+        RecyclerView.ViewHolder(itemBinding.root) {
+
+
+    }
 
     private val differCallBack = object : DiffUtil.ItemCallback<Note>() {
         override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {
@@ -61,6 +70,12 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.NoteViewHolder>() {
                 random.nextInt(256),
                 random.nextInt(256)
             )
+
+            binding?.imageDelete?.setOnClickListener {
+
+                listener.deleteNoteItem(currentNote)
+
+            }
 
             binding?.viewColor?.setBackgroundColor(color)
 

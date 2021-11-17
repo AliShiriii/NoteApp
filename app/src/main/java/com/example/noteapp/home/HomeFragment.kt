@@ -4,19 +4,21 @@ import android.os.Bundle
 import android.view.*
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentHomeBinding
 import com.example.noteapp.model.Note
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(R.layout.fragment_home),
-    SearchView.OnQueryTextListener {
+    SearchView.OnQueryTextListener, HomeAdapter.onClickDeleteListener {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -61,15 +63,9 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
     private fun setUpRecyclerView() {
 
-        noteAdapter = HomeAdapter()
+        noteAdapter = HomeAdapter(this)
 
         binding.recyclerView.apply {
-
-            layoutManager = StaggeredGridLayoutManager(
-                2,
-                StaggeredGridLayoutManager.VERTICAL
-
-            )
 
             setHasFixedSize(true)
             adapter = noteAdapter
@@ -117,13 +113,6 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
     }
 
-//    override fun onDestroy() {
-//        super.onDestroy()
-//
-//        _binding = null
-//
-//    }
-
     override fun onQueryTextSubmit(query: String?): Boolean {
 
         if (query != null) {
@@ -154,6 +143,30 @@ class HomeFragment : Fragment(R.layout.fragment_home),
             noteAdapter.differ.submitList(listQuery)
 
         })
+
+    }
+
+    override fun deleteNoteItem(note: Note) {
+
+        deleteNote(note)
+
+    }
+
+    private fun deleteNote(note: Note) {
+
+        AlertDialog.Builder(requireContext()).apply {
+            setTitle("Delete Note")
+            setMessage("Are you sure want to delete this name?")
+            setPositiveButton("DELETE") { _, _ ->
+
+                lifecycleScope.launch {
+                    viewModel.deleteNote(note)
+                }
+            }
+
+            setNegativeButton("CANCEL", null)
+
+        }.create().show()
 
     }
 }
