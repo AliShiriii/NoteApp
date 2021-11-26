@@ -1,17 +1,10 @@
 package com.example.noteapp.NewNote
 
-import android.Manifest
-import android.app.Activity
-import android.content.ContentResolver
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -23,7 +16,6 @@ import com.example.noteapp.home.HomeViewModel
 import com.example.noteapp.model.Note
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import java.io.InputStream
 
 
 @AndroidEntryPoint
@@ -60,7 +52,7 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        insertNote()
+        saveNotes()
 
     }
 
@@ -93,26 +85,33 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    private fun saveNotes() {
 
-        when (item.itemId) {
+        binding.fabSaveNotes.setOnClickListener {
 
-            R.id.saveMenu -> {
+            insertNote()
 
-                insertNote()
-
-            }
         }
-
-        return super.onOptionsItemSelected(item)
-
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        menu.clear()
-        inflater.inflate(R.menu.new_note_menu, menu)
-
-    }
-
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//
+//        when (item.itemId) {
+//
+//            R.id.saveMenu -> {
+//
+//                insertNote()
+//
+//            }
+//        }
+//
+//        return super.onOptionsItemSelected(item)
+//
+//    }
+//
+//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+//        super.onCreateOptionsMenu(menu, inflater)
+//        menu.clear()
+//        inflater.inflate(R.menu.new_note_menu, menu)
+//
 }
