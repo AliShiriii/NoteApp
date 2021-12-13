@@ -65,7 +65,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
         noteAdapter = HomeAdapter(this)
 
-        binding.recyclerView.apply {
+        binding.noteRecyclerView.apply {
 
             setHasFixedSize(true)
             adapter = noteAdapter
@@ -90,12 +90,12 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
         if (note.isNotEmpty()) {
 
-            binding.recyclerView.visibility = VISIBLE
+            binding.noteRecyclerView.visibility = VISIBLE
             binding.tvNoNotesAvailable.visibility = GONE
 
         } else {
 
-            binding.recyclerView.visibility = GONE
+            binding.noteRecyclerView.visibility = GONE
             binding.tvNoNotesAvailable.visibility = VISIBLE
 
         }

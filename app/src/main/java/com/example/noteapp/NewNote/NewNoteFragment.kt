@@ -16,6 +16,8 @@ import com.example.noteapp.home.HomeViewModel
 import com.example.noteapp.model.Note
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import java.text.DateFormat
+import java.util.*
 
 
 @AndroidEntryPoint
@@ -61,9 +63,14 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
         val title = binding.addNoteTitle.text.toString().trim()
         val body = binding.addNoteBody.text.toString().trim()
 
+        val calender = Calendar.getInstance()
+        val currentTime = DateFormat.getDateInstance(DateFormat.FULL).format(calender.time)
+//        var date = binding.date.text.toString().trim()
+//        date = currentTime
+
         if (title.isNotEmpty()) {
 
-            val note = Note(0, title, body)
+            val note = Note(0, title, body, currentTime)
 
             lifecycleScope.launch {
 

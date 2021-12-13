@@ -52,15 +52,17 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
 
         binding.addNoteTitleUpdate.setText(current.notTitle)
         binding.addNoteBodyUpdate.setText(current.noteBode)
+        binding.date.setText(current.date)
 
         binding.floatingActionButtonDone.setOnClickListener {
 
             val title = binding.addNoteTitleUpdate.text.toString().trim()
             val body = binding.addNoteBodyUpdate.text.toString().trim()
+            val date = binding.date.text.toString().trim()
 
             if (title.isNotEmpty()) {
 
-                val note = Note(current.id, title, body)
+                val note = Note(current.id, title, body, date)
                 activity?.show("Note updated")
 
                 lifecycleScope.launch {

@@ -8,4 +8,5 @@
     <string name="note_title">Note Title</string>
     <string name="note_body">Note Body...</string>
     <string name="search">Search</string>
+    <string name="date">Date</string>
 </resources>

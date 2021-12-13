@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/grey"
     android:layout_marginTop="12dp"
+    android:background="@color/grey"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -48,15 +48,24 @@
 
             </LinearLayout>
 
-<!--            <TextView-->
-<!--                android:id="@+id/tvNoteTitle"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="12dp"-->
-<!--                android:text="@string/note_title"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvNoteTitle"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="12dp"-->
+            <!--                android:text="@string/note_title"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold" />-->
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/date"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvNoteBody"

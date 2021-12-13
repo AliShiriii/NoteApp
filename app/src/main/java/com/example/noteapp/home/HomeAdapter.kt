@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.noteapp.databinding.ItemNoteAdapterBinding
 import com.example.noteapp.model.Note
+import java.text.DateFormat
+import java.util.*
 
 class HomeAdapter(private val listener: onClickDeleteListener) :
     RecyclerView.Adapter<HomeAdapter.NoteViewHolder>() {
@@ -23,7 +25,6 @@ class HomeAdapter(private val listener: onClickDeleteListener) :
 
     inner class NoteViewHolder constructor(itemBinding: ItemNoteAdapterBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-
 
     }
 
@@ -60,6 +61,7 @@ class HomeAdapter(private val listener: onClickDeleteListener) :
 
         holder.itemView.apply {
 
+            binding?.date?.text = currentNote.date
             binding?.tvNoteTitle?.text = currentNote.notTitle
             binding?.tvNoteBody?.text = currentNote.noteBode
 

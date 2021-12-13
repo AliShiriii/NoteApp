@@ -41,6 +41,15 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
                 <EditText
                     android:id="@+id/addNoteBody"
                     android:layout_width="match_parent"

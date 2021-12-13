@@ -12,5 +12,7 @@ data class Note(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val notTitle: String,
-    val noteBode: String
+    val noteBode: String,
+    val date: String
+
 ) : Parcelable
