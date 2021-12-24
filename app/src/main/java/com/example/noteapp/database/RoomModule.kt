@@ -15,19 +15,17 @@ object RoomModule {
 
     @Provides
     @Singleton
-    fun provideDatBase(@ApplicationContext context: Context): NoteDatabase {
+    fun provideDatBase(@ApplicationContext context: Context): NoteDatabase =
 
-        return Room.databaseBuilder(context, NoteDatabase::class.java, "db_note")
+         Room.databaseBuilder(context, NoteDatabase::class.java, "db_note")
             .fallbackToDestructiveMigration()
             .build()
-    }
+
 
     @Provides
     @Singleton
-    fun provideDao(dataBase: NoteDatabase): NoteDao {
+    fun provideDao(dataBase: NoteDatabase): NoteDao = dataBase.getNote()
 
-        return dataBase.getNote()
 
-    }
 
 }
