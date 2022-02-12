@@ -1,8 +1,8 @@
-package com.example.noteapp.database
+package com.example.repository.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.noteapp.model.Note
+import com.example.repository.model.Note
 
 @Dao
 interface NoteDao {

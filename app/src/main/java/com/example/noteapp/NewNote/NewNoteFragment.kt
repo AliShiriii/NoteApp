@@ -13,7 +13,7 @@ import com.example.noteapp.R
 import com.example.noteapp.Utils.show
 import com.example.noteapp.databinding.FragmentNewNoteBinding
 import com.example.noteapp.home.HomeViewModel
-import com.example.noteapp.model.Note
+import com.example.repository.model.Note
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.text.DateFormat

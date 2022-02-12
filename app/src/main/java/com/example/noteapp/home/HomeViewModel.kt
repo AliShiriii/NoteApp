@@ -1,7 +1,7 @@
 package com.example.noteapp.home
 
 import androidx.lifecycle.ViewModel
-import com.example.noteapp.model.Note
+import com.example.repository.model.Note
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

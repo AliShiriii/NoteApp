@@ -1,7 +1,9 @@
-package com.example.noteapp.database
+package com.example.noteapp.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.repository.db.NoteDao
+import com.example.repository.db.NoteDataBase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,16 +17,16 @@ object RoomModule {
 
     @Provides
     @Singleton
-    fun provideDatBase(@ApplicationContext context: Context): NoteDatabase =
+    fun provideDatBase(@ApplicationContext context: Context): NoteDataBase =
 
-         Room.databaseBuilder(context, NoteDatabase::class.java, "db_note")
+         Room.databaseBuilder(context, NoteDataBase::class.java, "db_note")
             .fallbackToDestructiveMigration()
             .build()
 
 
     @Provides
     @Singleton
-    fun provideDao(dataBase: NoteDatabase): NoteDao = dataBase.getNote()
+    fun provideDao(dataBase: NoteDataBase): NoteDao = dataBase.getNote()
 
 
 

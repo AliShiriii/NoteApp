@@ -20,8 +20,3 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-//chat app
-//https://www.youtube.com/watch?v=LxrsSUh5BMU
-
-//chat app
-//https://www.youtube.com/watch?v=pAzby-pyStM

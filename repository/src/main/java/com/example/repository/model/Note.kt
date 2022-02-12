@@ -1,4 +1,4 @@
-package com.example.noteapp.model
+package com.example.repository.model
 
 import android.os.Parcelable
 import androidx.room.Entity
@@ -8,7 +8,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Entity(tableName = "notes")
 data class Note(
-
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val notTitle: String,

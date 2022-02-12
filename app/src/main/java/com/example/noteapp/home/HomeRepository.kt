@@ -1,7 +1,7 @@
 package com.example.noteapp.home
 
-import com.example.noteapp.database.NoteDao
-import com.example.noteapp.model.Note
+import com.example.repository.db.NoteDao
+import com.example.repository.model.Note
 import javax.inject.Inject
 
 class HomeRepository @Inject constructor(private val dao: NoteDao) {

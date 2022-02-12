@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.noteapp.databinding.ItemNoteAdapterBinding
-import com.example.noteapp.model.Note
-import java.text.DateFormat
+import com.example.repository.model.Note
 import java.util.*
 
 class HomeAdapter(private val listener: onClickDeleteListener) :
