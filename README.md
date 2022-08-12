@@ -22,7 +22,7 @@ Note App is a simple note taking application 📝. Written in Kotlin and impleme
 * Coroutines
 * Material library
 * Navigation Components
-* viewBinding
+* ViewBinding
 * DataStore(Preferences)
 
 # Design Pattern
