@@ -1,4 +1,5 @@
 
+![logo](https://user-images.githubusercontent.com/65492308/184339965-b99ff6f9-da53-450a-899b-d8944a688a4d.png)
 
 About App
 -------------------------------------------------------
@@ -44,4 +45,7 @@ Design Pattern
   It stores UI-related data that isn't destroyed on app rotations.
 
 . Repository: The repository depends on a persistent data model and a remote backend data source.
+
+
+![mvvm-architecture-pattern](https://user-images.githubusercontent.com/65492308/184340019-d7a51cf7-9d1c-42bd-9fb5-3940f2bf5fc6.png)
 
