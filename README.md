@@ -1,5 +1,5 @@
 
-                            ![logo](https://user-images.githubusercontent.com/65492308/184339965-b99ff6f9-da53-450a-899b-d8944a688a4d.png)
+![logo](https://user-images.githubusercontent.com/65492308/184339965-b99ff6f9-da53-450a-899b-d8944a688a4d.png)
 
 About App
 -------------------------------------------------------
