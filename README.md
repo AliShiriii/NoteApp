@@ -22,6 +22,7 @@ Libraries used
 . Coroutines
 . Material library
 . Navigation Components
+. viewBinding
 . DataStore(Preferences)
 
 Design Pattern
