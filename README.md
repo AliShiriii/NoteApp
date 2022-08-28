@@ -1,3 +1,4 @@
+![photo_2022-08-28_10-20-10](https://user-images.githubusercontent.com/65492308/187086834-81b2b17a-dd17-4cb3-b4f2-366e78d5fad7.jpg)
 
 ![logo](https://user-images.githubusercontent.com/65492308/184339965-b99ff6f9-da53-450a-899b-d8944a688a4d.png)
 
