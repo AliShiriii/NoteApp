@@ -50,3 +50,9 @@ Note App is a simple note taking application 📝. Written in Kotlin and impleme
 
 ![mvvm-architecture-pattern](https://user-images.githubusercontent.com/65492308/184340019-d7a51cf7-9d1c-42bd-9fb5-3940f2bf5fc6.png)
 
+# Screens of the app
+
+![photo_2022-08-28_09-50-55](https://user-images.githubusercontent.com/65492308/187086014-9b92178b-7970-4e34-ae74-374c6e096b2b.jpg)
+
+![photo_2022-08-28_09-50-52](https://user-images.githubusercontent.com/65492308/187086040-28f31ddf-b6d3-4bc4-9aa8-764b57d28a60.jpg)
+
