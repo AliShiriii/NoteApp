@@ -53,7 +53,7 @@
                 <EditText
                     android:id="@+id/addNoteBody"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="start|top"
                     android:background="@android:color/transparent"
                     android:hint="@string/type_body"

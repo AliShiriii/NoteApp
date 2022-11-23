@@ -74,13 +74,13 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
         activity?.let {
 
-            viewModel.getAllNotes().observe(viewLifecycleOwner, { notes ->
+            viewModel.getAllNotes().observe(viewLifecycleOwner) { notes ->
 
                 noteAdapter.differ.submitList(notes)
 
                 updateNote(notes)
 
-            })
+            }
 
         }
 
@@ -138,11 +138,11 @@ class HomeFragment : Fragment(R.layout.fragment_home),
     private fun searchNotes(query: String?) {
 
         val searchQuery = "$query"
-        viewModel.searchNotes(searchQuery).observe(viewLifecycleOwner, { listQuery ->
+        viewModel.searchNotes(searchQuery).observe(viewLifecycleOwner) { listQuery ->
 
             noteAdapter.differ.submitList(listQuery)
 
-        })
+        }
 
     }
 
