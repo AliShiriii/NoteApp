@@ -1,4 +1,4 @@
-package com.example.noteapp.NewNote
+package com.example.noteapp.newNote
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.noteapp.R
-import com.example.noteapp.Utils.show
+import com.example.noteapp.utils.show
 import com.example.noteapp.databinding.FragmentNewNoteBinding
 import com.example.noteapp.home.HomeViewModel
 import com.example.repository.model.Note

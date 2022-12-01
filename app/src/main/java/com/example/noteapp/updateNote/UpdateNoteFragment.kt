@@ -1,4 +1,4 @@
-package com.example.noteapp.UpdateNote
+package com.example.noteapp.updateNote
 
 import android.os.Bundle
 import android.view.*
@@ -8,7 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.noteapp.R
-import com.example.noteapp.Utils.show
+import com.example.noteapp.utils.show
 import com.example.noteapp.databinding.FragmentUpdateNoteBinding
 import com.example.noteapp.home.HomeViewModel
 import com.example.repository.model.Note
