@@ -51,7 +51,7 @@ class UpdateNoteFragment : Fragment(R.layout.fragment_update_note) {
 
         binding.addNoteTitleUpdate.setText(current.notTitle)
         binding.addNoteBodyUpdate.setText(current.noteBode)
-        binding.date.setText(current.date)
+        binding.date.text = current.date
 
         binding.floatingActionButtonDone.setOnClickListener {
 

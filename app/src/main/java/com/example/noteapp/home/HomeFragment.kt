@@ -47,8 +47,15 @@ class HomeFragment : Fragment(R.layout.fragment_home),
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        observeViewModel()
         goToNewFragment()
         setUpRecyclerView()
+
+    }
+
+    private fun observeViewModel(){
+
+        viewModel.getAllNotes()
 
     }
 
@@ -74,7 +81,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),
 
         activity?.let {
 
-            viewModel.getAllNotes().observe(viewLifecycleOwner) { notes ->
+            viewModel.getNotes.observe(viewLifecycleOwner) { notes ->
 
                 noteAdapter.differ.submitList(notes)
 

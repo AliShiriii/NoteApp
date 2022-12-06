@@ -72,8 +72,6 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
 
             val note = Note(0, title, body, currentTime)
 
-            lifecycleScope.launch {
-
                 viewModel.insertNote(note)
 
                 Toast.makeText(
@@ -81,7 +79,6 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
                     Toast.LENGTH_LONG
                 ).show()
 
-            }
 
             findNavController().navigate(NewNoteFragmentDirections.actionNewNoteFragmentToHomeFragment())
 
