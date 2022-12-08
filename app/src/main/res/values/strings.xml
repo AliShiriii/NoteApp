@@ -9,4 +9,7 @@
     <string name="note_body">Note Body...</string>
     <string name="search">Search</string>
     <string name="date">Date</string>
+    <string name="enter_your_email">Enter your Email.....</string>
+    <string name="enter_your_password">Enter Your Password.....</string>
+    <string name="signin">SignIn</string>
 </resources>

@@ -40,4 +40,14 @@
             app:argType="com.example.noteapp.model.Note"
             app:nullable="true" />
     </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.noteapp.signIn.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.noteapp.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
