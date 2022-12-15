@@ -12,4 +12,5 @@
     <string name="enter_your_email">Enter your Email.....</string>
     <string name="enter_your_password">Enter Your Password.....</string>
     <string name="signin">SignIn</string>
+    <string name="image">image</string>
 </resources>
