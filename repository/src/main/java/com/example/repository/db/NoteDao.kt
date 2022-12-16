@@ -3,6 +3,7 @@ package com.example.repository.db
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.repository.model.Note
+import com.example.repository.model.User
 
 @Dao
 interface NoteDao {
@@ -26,4 +27,11 @@ interface NoteDao {
     //Query fore search notes
     @Query("SELECT * FROM notes ORDER BY notTitle LIKE :query OR noteBode LIKE :query")
     fun searchNotes(query: String?): LiveData<List<Note>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun signUpUser(loginUser: User)
+
+    @Query("SELECT * FROM user_model_table WHERE email= :email AND password= :password")
+    suspend fun loginUser(email: String?, password: String?): User?
+
 }
