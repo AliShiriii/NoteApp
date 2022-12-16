@@ -1,4 +1,4 @@
-package com.example.noteapp.signIn
+package com.example.noteapp.signUp
 
 import android.os.Bundle
 import android.view.LayoutInflater
