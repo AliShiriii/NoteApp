@@ -5,13 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.noteapp.databinding.FragmentSignInBinding
+import com.example.noteapp.databinding.FragmentSignUpBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SignInFragment : Fragment() {
+class SignUpFragment : Fragment() {
 
-    private var _binding: FragmentSignInBinding? = null
+    private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,7 +20,7 @@ class SignInFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
 
-        _binding = FragmentSignInBinding.inflate(inflater, container, false)
+        _binding = FragmentSignUpBinding.inflate(inflater, container, false)
 
         return binding.root
     }
