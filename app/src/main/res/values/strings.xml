@@ -18,4 +18,8 @@
     <string name="password">Password</string>
     <string name="email_and_password_not_found_please_try_again">Email And Password Not Found Please Try Again</string>
     <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up_to_noteapp">Sign Up To NoteApp</string>
+    <string name="todo">TODO</string>
 </resources>

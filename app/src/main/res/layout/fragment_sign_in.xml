@@ -7,50 +7,111 @@
     android:background="@color/white"
     tools:context=".signIn.SignInFragment">
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shape_top_login"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/imageTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/shape_bottom_login"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/textlogin"
+        style="@style/StyleOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="welcome to NoteApp"
-        android:textSize="32sp"
-        android:layout_marginTop="60dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:hint="@string/enter_your_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/imageOne"
+        android:layout_marginTop="26dp"
+        android:text="@string/sign_up_to_noteapp"
+        app:layout_constraintEnd_toEndOf="@id/imageOne"
+        app:layout_constraintStart_toStartOf="@id/imageOne"
+        app:layout_constraintTop_toBottomOf="@id/imageOne" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/emailSignUp"
+        style="@style/loginStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:hint="@string/enter_your_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email" />
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/shape_edittext_login"
+        android:gravity="center"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:lineSpacingExtra="4.7sp"
+        android:imeOptions="actionNext"
+        android:paddingTop="10dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintEnd_toEndOf="@id/textlogin"
+        app:layout_constraintStart_toStartOf="@id/textlogin"
+        app:layout_constraintTop_toBottomOf="@id/textlogin"
+        android:autofillHints="@string/email_address" />
+
+    <EditText
+        android:id="@+id/passwordSignUp"
+        style="@style/loginStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/shape_edittext_login"
+        android:gravity="center"
+        android:hint="@string/password"
+        android:imeOptions="actionNext"
+        android:paddingTop="10dp"
+        android:paddingBottom="14dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/emailSignUp"
+        app:layout_constraintStart_toStartOf="@id/emailSignUp"
+        app:layout_constraintTop_toBottomOf="@id/emailSignUp" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        style="@style/loginStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/shape_edittext_login"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:imeOptions="actionDone"
+        android:hint="@string/confirm_password"
+        android:paddingTop="10dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintEnd_toEndOf="@id/passwordSignUp"
+        app:layout_constraintStart_toStartOf="@id/passwordSignUp"
+        app:layout_constraintTop_toBottomOf="@id/passwordSignUp" />
 
     <Button
+        android:id="@+id/signUp"
+        style="@style/StyleTextLight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="32dp"
-        android:text="@string/signin"
-        android:background="@color/hintColor"
-
-        app:layout_constraintEnd_toEndOf="@id/password"
-        app:layout_constraintStart_toStartOf="@id/password"
-        app:layout_constraintTop_toBottomOf="@id/password" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_login_button"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="@id/confirmPassword"
+        app:layout_constraintStart_toStartOf="@id/confirmPassword"
+        app:layout_constraintTop_toBottomOf="@id/confirmPassword"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
