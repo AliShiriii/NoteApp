@@ -79,7 +79,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/yellow"
         android:clickable="true"
         android:contentDescription="image"
         app:srcCompat="@drawable/ic_check"
