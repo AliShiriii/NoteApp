@@ -22,4 +22,6 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up_to_noteapp">Sign Up To NoteApp</string>
     <string name="todo">TODO</string>
+    <string name="note_app">Welcome to Note App</string>
+    <string name="in_this_app_you_can">in this app you can</string>
 </resources>

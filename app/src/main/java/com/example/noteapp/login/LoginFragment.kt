@@ -50,7 +50,7 @@ class LoginFragment : Fragment() {
             ) {
 
                viewModel.loginUser(USER_ID, PASSWORD_ID)
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSplashFragment())
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
 
             } else if (binding.email.text.toString() != USER_ID
                 && binding.password.text.toString() != PASSWORD_ID

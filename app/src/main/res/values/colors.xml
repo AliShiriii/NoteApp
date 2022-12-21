@@ -12,4 +12,6 @@
     <color name="grey">#E1DFE1</color>
     <color name="hintColor">#8A878A</color>
     <color name="yellow">#F9E543</color>
+    <color name="yellow_2">#F6EC95</color>
+    <color name="yellow_3">#F8F3CD</color>
 </resources>
