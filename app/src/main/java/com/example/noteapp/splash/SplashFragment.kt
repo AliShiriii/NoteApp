@@ -39,11 +39,6 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     private fun goToSignUp() {
 
-        helpTextGenerator(1000, "create your note..")
-        helpTextGenerator(2000, "update your note..")
-        helpTextGenerator(3000, "delete your note..")
-        helpTextGenerator(4000, "save your note..")
-
         var textArray = arrayOf(
             "create your note..",
             "save your note..",
@@ -53,7 +48,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         )
         var i = 1
 
-        for (i in 1..6) {
+        for (i in 1..5) {
 
             helpTextGenerator((i * 1000).toLong(), textArray[i-1])
         }
