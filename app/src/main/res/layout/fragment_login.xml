@@ -89,7 +89,7 @@
         android:layout_marginTop="6dp"
         android:gravity="center_horizontal"
         android:text="@string/email_and_password_not_found_please_try_again"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@id/password"
         app:layout_constraintStart_toStartOf="@id/password"
         app:layout_constraintTop_toBottomOf="@id/password" />
